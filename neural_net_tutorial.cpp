@@ -18,8 +18,7 @@ Net::Net(vector<uint> &network){
 
 	for (uint num_layer=0; num_layer < topology.size()-1; ++num_layer){
 		m_layers.push_back(Layer());
-
-		uint numOut = num_layer == topology.size()-1 ? 0: topology[num_layer+1];
+        uint numOut = num_layer == topology.size()-1 ? 0: topology[num_layer+1];
 
 		for (uint num_neuron=0; num_neuron <= topology[num_layer]; ++num_neuron){
 			m_layers.back().push_back(Neuron(numOut));
